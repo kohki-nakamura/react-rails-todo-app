@@ -10,7 +10,7 @@ class Api::V1::TodosController < ApplicationController
     @todo = Todo.new(todo_params)
 
     if @todo.save
-      render json: @todo, status: :created, location: @todo
+      render json: @todo, status: :created, location: api_v1_todos_url(@todo)
     else
       render json: @todo.errors, status: :unprocessable_entity
     end
