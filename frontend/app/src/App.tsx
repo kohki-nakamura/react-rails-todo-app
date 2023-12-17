@@ -17,13 +17,18 @@ const App = () => {
   const [title, setTitle] = useState('');
 
   const handleCreateTodo = async () => {
-    const response = await createTodo({
-      title: title,
-      completed: false,
-    });
+    try {
+      const response = await createTodo({
+        title: title,
+        completed: false,
+      });
 
-    setTodos([...todos, response.data]);
-    setTitle('');
+      setTodos([...todos, response.data]);
+      setTitle('');
+    } catch (err) {
+      console.log(err);
+      alert('作成に失敗しました。');
+    }
   };
 
   const handleToggleTodo = async (id: number, completed: boolean) => {
@@ -55,7 +60,6 @@ const App = () => {
           onChange={(e) => setTitle(e.target.value)}
         />
         <Button
-          disabled={!title}
           colorScheme="blue"
           ml={4}
         >
