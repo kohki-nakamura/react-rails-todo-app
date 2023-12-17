@@ -3,7 +3,7 @@ class Api::V1::TodosController < ApplicationController
 
   def index
     @todos = Todo.all
-    render json: @todos
+    render json: @todos, status: :ok
   end
 
   def create
@@ -18,7 +18,7 @@ class Api::V1::TodosController < ApplicationController
 
   def update
     if @todo.update(todo_params)
-      render json: @todo
+      render json: @todo, status: :ok, location: api_v1_todos_url(@todo)
     else
       render json: @todo.errors, status: :unprocessable_entity
     end
