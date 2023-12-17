@@ -1,5 +1,5 @@
 # Rails7,React,MySQL8,Dockerの雛形
-https://qiita.com/zakino123/items/5f883112de45a27256b2
+https://github.com/kohki-nakamura/react-rails7-mysql8-docker-template
 
 ## 準備
 ```
@@ -37,3 +37,10 @@ https://stackoverflow.com/questions/25277457/google-chrome-redirecting-localhost
 2. リロードボタンを右クリック
 3. 一番下の「キャッシュの削除とハード再読み込み」を選択
 4. リロード
+
+## 参考
+### docker
+https://qiita.com/zakino123/items/5f883112de45a27256b2
+https://zenn.dev/925rycki/articles/655462e9c76906
+### アプリ
+https://zenn.dev/925rycki/articles/9cdcd40abc54b9
