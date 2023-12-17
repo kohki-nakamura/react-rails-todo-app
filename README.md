@@ -10,7 +10,7 @@ rm -rf .git
 cp .env.sample .env
 docker-compose build
 docker-compose run api bundle install
-docker-compose run --rm front sh -c "cd app && npm install"
+docker-compose run --rm front npm install
 
 docker-compose run api rails db:create
 docker-compose run api rails db:migrate
