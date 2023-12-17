@@ -18,7 +18,7 @@ const App = () => {
 
   const handleCreateTodo = async () => {
     const response = await createTodo({
-      title,
+      title: title,
       completed: false,
     });
 
